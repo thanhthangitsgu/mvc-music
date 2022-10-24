@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+Options -Multiviews
+RewriteEngine On
+#localhost/mvc -> localhost/mvc/public
+RewriteRule ^$ public/ [L]
+#localhost/mvc/login -> localhost/mvc/public/login
+RewriteRule (.*)$ public/$1 [L]
+</IfModule>
